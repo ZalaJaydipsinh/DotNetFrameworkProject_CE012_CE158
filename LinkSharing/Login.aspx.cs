@@ -47,7 +47,7 @@ namespace LinkSharing
 
                 //Session["id"] = Lu_email.Text;
                 Session["id"] = uid;
-                if (Lu_pswd.Text == "")
+                if (Lu_pswd.Text.Length == 0)
                 {
                     Session["isPublic"] = true;
                     Response.Redirect("Public_Links.aspx");
