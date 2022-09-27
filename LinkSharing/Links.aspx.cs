@@ -17,7 +17,11 @@ namespace LinkSharing
             {
                 Response.Redirect("Login.aspx");
             }
-            
+            if (Session["isPublic"] != null)
+            {
+                Response.Redirect("Public_Links.aspx");
+            }
+
             GridView1.Columns[0].Visible = false;
            //GridView1.Columns[1].Visible = false;
             GridView1.Columns[2].Visible = false;

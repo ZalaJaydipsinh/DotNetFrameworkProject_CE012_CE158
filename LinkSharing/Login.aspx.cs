@@ -23,28 +23,46 @@ namespace LinkSharing
             string mainconn = ConfigurationManager.ConnectionStrings["UserConnection"].ConnectionString;
             SqlConnection sqlconn = new SqlConnection(mainconn);
             SqlCommand sqlcomm = new SqlCommand("select * from Newuser where email=@email and password=@password",sqlconn);
+            if (Lu_pswd.Text == "")
+            {
+                sqlcomm = new SqlCommand("select * from Newuser where email=@email", sqlconn);
+            }
+            else
+            {
+                sqlcomm.Parameters.AddWithValue("password", Lu_pswd.Text);
+            }
             sqlcomm.Parameters.AddWithValue("email", Lu_email.Text);
-            sqlcomm.Parameters.AddWithValue("password", Lu_pswd.Text);
             SqlDataAdapter sda = new SqlDataAdapter(sqlcomm);
             DataTable dt = new DataTable();
             sda.Fill(dt);
-            DataRow dr = dt.Rows[0];
-            int uid = dr.Field<int>("Uid");
+            
 
             sqlconn.Open();
             sqlcomm.ExecuteNonQuery();
             sqlconn.Close();
             if (dt.Rows.Count > 0)
             {
+                DataRow dr = dt.Rows[0];
+                int uid = dr.Field<int>("Uid");
+
                 //Session["id"] = Lu_email.Text;
                 Session["id"] = uid;
-                Response.Redirect("Index.aspx");
+                if (Lu_pswd.Text == "")
+                {
+                    Session["isPublic"] = true;
+                    Response.Redirect("Public_Links.aspx");
+                }
+                else{
+                    Response.Redirect("Index.aspx");
+                }
                 Session.RemoveAll();
             }
             else
             {
                 Response.Write("<script>alert('Wrong Username & Password !')</script>");
             }
+
+
         }
 
     }

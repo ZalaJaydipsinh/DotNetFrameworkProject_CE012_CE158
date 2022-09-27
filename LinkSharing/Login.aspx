@@ -97,9 +97,9 @@
                 <td class="auto-style5">
                     <asp:TextBox ID="Lu_pswd" runat="server" TextMode="Password"></asp:TextBox>
                 </td>
-                <td class="auto-style6">
+                <!---<td class="auto-style6">
                     <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="Lu_pswd" ErrorMessage="Password is required." ForeColor="Red"></asp:RequiredFieldValidator>
-                </td>
+                </td>-->
             </tr>
             <tr>
                 <td class="auto-style2">&nbsp;</td>

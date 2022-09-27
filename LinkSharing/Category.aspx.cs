@@ -22,6 +22,10 @@ namespace LinkSharing
             {
                 Response.Redirect("Login.aspx");
             }
+            if (Session["isPublic"] != null)
+            {
+                Response.Redirect("Public_Links.aspx");
+            }
         }
 
         protected void btn_submit_Click(object sender, EventArgs e)
