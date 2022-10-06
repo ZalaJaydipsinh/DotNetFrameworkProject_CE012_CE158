@@ -76,6 +76,11 @@ namespace LinkSharing
             //response.End();
         }
 
-
+        protected void logout_Click(object sender, EventArgs e)
+        {
+            Session.RemoveAll();
+            Session.Abandon();
+            Response.Redirect("Login.aspx");
+        }
     } 
 }

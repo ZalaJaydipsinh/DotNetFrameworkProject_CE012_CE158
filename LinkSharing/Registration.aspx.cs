@@ -33,7 +33,7 @@ namespace LinkSharing
             u_pswd.Text = "";
 
             Response.Write("<script>alert('Your Registration is Successful.')</script>");
-            //Response.Redirect("Login.aspx");
+            
         }
 
         

@@ -52,11 +52,17 @@ namespace LinkSharing
                     Session["isPublic"] = true;
                     Response.Redirect("Public_Links.aspx");
                 }
-                else{
+                else if(Lu_email.Text == "admin@gmail.com" && Lu_pswd.Text == "admin123")
+                {
+                    Response.Redirect("Admin.aspx");
+                }
+                else
+                {
                     Response.Redirect("Index.aspx");
                 }
                 Session.RemoveAll();
             }
+            
             else
             {
                 Response.Write("<script>alert('Wrong Username & Password !')</script>");

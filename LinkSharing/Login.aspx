@@ -4,10 +4,11 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
+    <link rel="stylesheet" href="	https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
     <title></title>
     <style type="text/css">
         .body{
-            background-color: #ABD6DFFF;
+            background-color: floralwhite;
         }
         .auto-style1 {
             width: 100%;
@@ -32,48 +33,99 @@
             height: 29px;
             padding: 4px;
         }
-        .auto-style6 {
-            height: 29px;
-            padding: 4px;
-        }
         .auto-style7 {
             border-style: solid;
             border-color: inherit;
             border-width: medium;
-            text-decoration: underline;
             text-align: center;
             margin-left: 510px;
-            width: 329px;
+            width: 386px;
             padding: 15px;
-            font-size: x-large;
+            font-size: xx-large;
+            font-family:Papyrus;
         }
         #Button_login{
+            color: blue;
             padding: 5px;
             font-size: 17px;
             border: 1px solid #008CBA;
             border-radius: 8px;
-            background-color: #E7EBE0FF;
+            background-color: rgb(128,128,128,0.5);
         }
         #Button_login:hover {
             box-shadow: 0 5px 15px 0 rgba(0,0,255,0.6);
         }
-        .auto-style8 {
-            text-align: center;
-        }
-       
+               
         .auto-style9 {
             font-size: large;
         }
-       
+        .protitle{
+            font-size: xx-large;
+            font-family:'Lucida Handwriting';
+        }
+        .nav-item{
+            font-size:large;
+
+        }
+        .auto-style10 {
+            margin-left: 800px;
+        }
+        #HyperLink1 {
+            background-color: rgb(128,128,128,0.5);
+            color: black;
+            padding: 0.5em 1em;
+            text-decoration: none;
+            text-transform: uppercase;
+            border: 1px solid #008CBA;
+            border-radius: 8px;
+        }
+        #HyperLink2 {
+            background-color: rgb(128,128,128,0.5);
+            color: black;
+            padding: 0.5em 1em;
+            text-decoration: none;
+            text-transform: uppercase;
+            border: 1px solid #008CBA;
+            border-radius: 8px;
+        }
     </style>
 </head>
 <body class="body">
-    <div class="auto-style8">
-        <br /><br />
-    </div>
     <form id="form1" runat="server">
-        <br /><br />
-        <p class="auto-style7"><strong>LOGIN</strong></p>
+        <div>
+            <br />
+            <br />
+            <nav class="navbar navbar-expand-lg bg-light">
+  <div class="container-fluid">
+      <div class="protitle"><em><strong>LinkShare</strong></em>&nbsp;&nbsp;</div>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="Index.aspx">Home</a>
+        </li>&nbsp;&nbsp;
+        <li class="nav-item">
+          <a class="nav-link" href="About.aspx">About Us</a>
+        </li>&nbsp;&nbsp;
+        <li class="nav-item">
+          <a class="nav-link" href="Contact.aspx">Contact</a>
+        </li>
+      </ul>
+        <div class="auto-style10">
+            <asp:HyperLink ID="HyperLink2" runat="server" ForeColor="Blue" NavigateUrl="~/Registration.aspx" CssClass="auto-style9">SIGNUP</asp:HyperLink>    
+            &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+            <asp:HyperLink ID="HyperLink1" runat="server" CssClass="auto-style9" ForeColor="Blue" NavigateUrl="~/Login.aspx">LOGIN</asp:HyperLink>
+        </div>
+</nav>
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+        </div>
+        <p class="auto-style7"><strong><em>LOGIN</em></strong></p>
         <table class="auto-style1">
             <tr>
                 <td class="auto-style2">
@@ -104,12 +156,7 @@
             <tr>
                 <td class="auto-style2">&nbsp;</td>
                 <td class="auto-style3">
-                    <br />
-                    <asp:Button ID="Button_login" runat="server" OnClick="Button_login_Click" Text="Login" />
-                </td>
-                <td>
-                    <br />
-                    <asp:HyperLink ID="HyperLink1" runat="server" ForeColor="Blue" NavigateUrl="~/Registration.aspx" CssClass="auto-style9">New User</asp:HyperLink>
+                    <asp:Button ID="Button_login" runat="server" OnClick="Button_login_Click" Text=" Login " CssClass="nav-item" />
                 </td>
             </tr>
         </table>

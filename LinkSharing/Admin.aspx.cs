@@ -14,15 +14,16 @@ namespace LinkSharing
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            
-        }
+            if (Session["id"] == null)
+            {
+                Response.Redirect("Login.aspx");
+            }
+            if (Session["isPublic"] != null)
+            {
+                Response.Redirect("Public_Links.aspx");
+            }
 
-        protected void UserDetails_Click(object sender, EventArgs e)
-        {
-            ShowUsers();
-        }
-        protected void ShowUsers()
-        {
+
             SqlConnection con = new SqlConnection();
             con.ConnectionString = ConfigurationManager.ConnectionStrings["UserConnection"].ConnectionString;
             try
@@ -33,9 +34,25 @@ namespace LinkSharing
                     SqlCommand cmd = new SqlCommand(command, con);
                     con.Open();
                     SqlDataReader rdr = cmd.ExecuteReader();
-                    GridViewUser.DataSource = rdr;
-                    GridViewUser.DataBind();
+                    GridView1.DataSource = rdr;
+                    GridView1.DataBind();
                     rdr.Close();
+
+
+                    string str = "select * from Category";
+                    SqlDataAdapter adp = new SqlDataAdapter(str, con);
+                    DataSet set1 = new DataSet();
+                    adp.Fill(set1);
+                    GridView2.DataSource = set1.Tables[0];
+                    GridView2.DataBind();
+
+                    string str1 = "select * from Urls";
+                    SqlDataAdapter adp1 = new SqlDataAdapter(str1, con);
+                    DataSet set2 = new DataSet();
+                    adp1.Fill(set2);
+                    GridView3.DataSource = set2.Tables[0];
+                    GridView3.DataBind();
+
                 }
             }
             catch (Exception ex)
@@ -44,5 +61,11 @@ namespace LinkSharing
             }
         }
 
+        protected void logout_Click(object sender, EventArgs e)
+        {
+            Session.RemoveAll();
+            Session.Abandon();
+            Response.Redirect("Login.aspx");
+        }
     }
 }

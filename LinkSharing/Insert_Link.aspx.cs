@@ -99,5 +99,12 @@ namespace LinkSharing
                 Response.Write("Errors: " + ex.StackTrace);
             }
         }
+
+        protected void logout_Click(object sender, EventArgs e)
+        {
+            Session.RemoveAll();
+            Session.Abandon();
+            Response.Redirect("Login.aspx");
+        }
     }
 }
