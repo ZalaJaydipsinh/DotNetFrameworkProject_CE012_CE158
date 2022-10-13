@@ -13,9 +13,7 @@ Inherits="LinkSharing.Category" %>
     />
     <title>Insert Category</title>
       <style>
-          .body{
-            background-color: floralwhite;
-        }
+            
           .protitle{
             font-size: xx-large;
             font-family:'Lucida Handwriting';
@@ -39,8 +37,6 @@ Inherits="LinkSharing.Category" %>
     
       <form autocomplete="off" id="form1" runat="server">
           <div>
-            <br />
-            <br />
             <nav class="navbar navbar-expand-lg bg-light">
   <div class="container-fluid">
       <div class="protitle"><em><strong>LinkShare</strong></em>&nbsp;&nbsp;</div>
@@ -52,9 +48,7 @@ Inherits="LinkSharing.Category" %>
         <li class="nav-item">
           <a class="nav-link" aria-current="page" href="Index.aspx">Home</a>
         </li>&nbsp;&nbsp;
-        <li class="nav-item">
-          <a class="nav-link" href="About.aspx">About Us</a>
-        </li>&nbsp;&nbsp;
+         
         <li class="nav-item">
           <a class="nav-link" href="Contact.aspx">Contact</a>
         </li>
@@ -63,9 +57,6 @@ Inherits="LinkSharing.Category" %>
       <asp:LinkButton ID="logout" runat="server" OnClick="logout_Click">Logout </asp:LinkButton>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   </div>
 </nav>
-            <br />
-            <br />
-            <br />
         </div>
           <div class="container mt-5">
         <div class="card border-primary">

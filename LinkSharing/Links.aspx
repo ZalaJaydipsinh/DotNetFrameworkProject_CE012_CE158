@@ -12,10 +12,8 @@
     />
     <title>Links</title>
     <style>
-          .body{
-            background-color: floralwhite;
-        }
-          .protitle{
+            
+        .protitle{
             font-size: xx-large;
             font-family:'Lucida Handwriting';
         }
@@ -36,13 +34,37 @@
             background-color: #d3d2cc;
             text-decoration:none;
         }
+
+        mainContent {
+            text-align: center;
+            justify-content: center;
+            display: flex;
+        }
+        th:first-of-type {
+          border-top-left-radius: 10px;
+          padding: 10px;
+        }
+        th:last-of-type {
+          border-top-right-radius: 10px;
+          padding: 10px;
+        }
+        tr:last-of-type td:first-of-type {
+          border-bottom-left-radius: 10px;
+          padding: 10px;
+        }
+        tr:last-of-type td:last-of-type {
+          border-bottom-right-radius: 10px;
+        }
+        table{
+            width:70%;
+            
+            box-shadow:20px 20px 30px grey;
+        }
       </style>
 </head>
 <body class="body">
     <form id="form1" runat="server">
         <div>
-            <br />
-            <br />
             <nav class="navbar navbar-expand-lg bg-light">
   <div class="container-fluid">
       <div class="protitle"><em><strong>LinkShare</strong></em>&nbsp;&nbsp;</div>
@@ -54,9 +76,7 @@
         <li class="nav-item">
           <a class="nav-link" aria-current="page" href="Index.aspx">Home</a>
         </li>&nbsp;&nbsp;
-        <li class="nav-item">
-          <a class="nav-link" href="About.aspx">About Us</a>
-        </li>&nbsp;&nbsp;
+         
         <li class="nav-item">
           <a class="nav-link" href="Contact.aspx">Contact</a>
         </li>
@@ -65,9 +85,6 @@
       <asp:LinkButton ID="logout" runat="server" OnClick="logout_Click">Logout</asp:LinkButton>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   </div>
 </nav>
-            <br />
-            <br />
-            <br />
         </div>
         <div class="container-fluid mr-2 mt-3">
             <asp:GridView class="table table-bordered table-condensed table-responsive table-hover " ID="GridView1" runat="server" AllowPaging="True" AutoGenerateColumns="False" DataKeyNames="Id" DataSourceID="SqlDataSourceLinks" AllowSorting="True" EnableTheming="True">

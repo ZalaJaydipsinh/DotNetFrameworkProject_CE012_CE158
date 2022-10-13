@@ -36,6 +36,7 @@ namespace LinkSharing
             {
                 string query = "INSERT INTO Category (Name,Uid) VALUES(@Name,@Uid)";
                 String category_txt = txt_cname.Text;
+                txt_cname.Text = "";
                 String uid = Session["id"].ToString();
                 //Response.Write(category_txt);
                 //Response.Write(uid);

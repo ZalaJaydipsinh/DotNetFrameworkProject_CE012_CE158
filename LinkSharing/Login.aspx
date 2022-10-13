@@ -7,9 +7,7 @@
     <link rel="stylesheet" href="	https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
     <title></title>
     <style type="text/css">
-        .body{
-            background-color: floralwhite;
-        }
+          
         .auto-style1 {
             width: 100%;
         }
@@ -93,8 +91,6 @@
 <body class="body">
     <form id="form1" runat="server">
         <div>
-            <br />
-            <br />
             <nav class="navbar navbar-expand-lg bg-light">
   <div class="container-fluid">
       <div class="protitle"><em><strong>LinkShare</strong></em>&nbsp;&nbsp;</div>
@@ -106,9 +102,7 @@
         <li class="nav-item">
           <a class="nav-link" aria-current="page" href="Index.aspx">Home</a>
         </li>&nbsp;&nbsp;
-        <li class="nav-item">
-          <a class="nav-link" href="About.aspx">About Us</a>
-        </li>&nbsp;&nbsp;
+         
         <li class="nav-item">
           <a class="nav-link" href="Contact.aspx">Contact</a>
         </li>
@@ -119,13 +113,9 @@
             <asp:HyperLink ID="HyperLink1" runat="server" CssClass="auto-style9" ForeColor="Blue" NavigateUrl="~/Login.aspx">LOGIN</asp:HyperLink>
         </div>
 </nav>
-            <br />
-            <br />
-            <br />
-            <br />
+            
             <br />
         </div>
-        <p class="auto-style7"><strong><em>LOGIN</em></strong></p>
         <table class="auto-style1">
             <tr>
                 <td class="auto-style2">

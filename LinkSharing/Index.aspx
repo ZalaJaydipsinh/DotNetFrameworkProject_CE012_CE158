@@ -7,9 +7,7 @@
     <link rel="stylesheet" href="	https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
     <title></title>
     <style type="text/css">
-        .body{
-            background-color: floralwhite;
-        }
+          
         #logout{
             margin-top: 10px;
             padding: 5px;
@@ -74,8 +72,6 @@
 <body class="body">
     <form id="form1" runat="server">
         <div>
-            <br />
-            <br />
             <nav class="navbar navbar-expand-lg bg-light">
   <div class="container-fluid">
       <div class="protitle"><em><strong>LinkShare</strong></em>&nbsp;&nbsp;</div>
@@ -87,9 +83,7 @@
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="Index.aspx">Home</a>
         </li>&nbsp;&nbsp;
-        <li class="nav-item">
-          <a class="nav-link" href="About.aspx">About Us</a>
-        </li>&nbsp;&nbsp;
+         
         <li class="nav-item">
           <a class="nav-link" href="Contact.aspx">Contact</a>
         </li>

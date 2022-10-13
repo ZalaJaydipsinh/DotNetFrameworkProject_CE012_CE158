@@ -12,9 +12,7 @@
     />
     <title></title>
     <style>
-        .body{
-            background-color: floralwhite;
-        }
+          
         .auto-style1 {
             text-align: center;
         }
@@ -48,8 +46,6 @@
 <body class="body" style="margin-left: 0px">
     <form id="form1" runat="server">
         <div>
-            <br />
-            <br />
             <nav class="navbar navbar-expand-lg bg-light">
   <div class="container-fluid">
       <div class="protitle"><em><strong>LinkShare</strong></em>&nbsp;&nbsp;</div>

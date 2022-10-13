@@ -10,9 +10,7 @@
 
     <title>Insert Link</title>
       <style>
-          .body{
-            background-color: floralwhite;
-        }
+            
           .protitle{
             font-size: xx-large;
             font-family:'Lucida Handwriting';
@@ -40,8 +38,6 @@
   <body class="body">
     <form id="form1" class="mx-auto" runat="server">
         <div>
-            <br />
-            <br />
             <nav class="navbar navbar-expand-lg bg-light">
   <div class="container-fluid">
       <div class="protitle"><em><strong>LinkShare</strong></em>&nbsp;&nbsp;</div>
@@ -53,9 +49,7 @@
         <li class="nav-item">
           <a class="nav-link" aria-current="page" href="Index.aspx">Home</a>
         </li>&nbsp;&nbsp;
-        <li class="nav-item">
-          <a class="nav-link" href="About.aspx">About Us</a>
-        </li>&nbsp;&nbsp;
+         
         <li class="nav-item">
           <a class="nav-link" href="Contact.aspx">Contact</a>
         </li>
@@ -64,9 +58,7 @@
       <asp:LinkButton ID="logout" runat="server" OnClick="logout_Click">Logout</asp:LinkButton>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   </div>
 </nav>
-            <br />
-            <br />
-            <br />
+            
         </div>
       <main class="container mt-3 col-xl-6">
 

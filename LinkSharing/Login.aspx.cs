@@ -15,7 +15,14 @@ namespace LinkSharing
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (Session["id"] != null)
+            {
+                Response.Redirect("index.aspx");
+            }
+            if (Session["isPublic"] != null)
+            {
+                Response.Redirect("Public_Links.aspx");
+            }
         }
        
         protected void Button_login_Click(object sender, EventArgs e)

@@ -77,6 +77,7 @@
       <DependentUpon>Users.mdf</DependentUpon>
     </Content>
     <Content Include="Category.aspx" />
+    <Content Include="Contact.aspx" />
     <Content Include="Index.aspx" />
     <Content Include="Insert_Link.aspx" />
     <Content Include="Links.aspx" />
@@ -100,6 +101,13 @@
     </Compile>
     <Compile Include="Category.aspx.designer.cs">
       <DependentUpon>Category.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Contact.aspx.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Contact.aspx.designer.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
     </Compile>
     <Compile Include="Index.aspx.cs">
       <DependentUpon>Index.aspx</DependentUpon>
