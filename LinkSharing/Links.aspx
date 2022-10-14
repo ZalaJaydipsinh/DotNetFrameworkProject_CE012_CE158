@@ -67,7 +67,7 @@
         <div>
             <nav class="navbar navbar-expand-lg bg-light">
   <div class="container-fluid">
-      <div class="protitle"><em><strong>LinkShare</strong></em>&nbsp;&nbsp;</div>
+      <div class="protitle"><em><strong>  KeepLink</strong></em>&nbsp;&nbsp;</div>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -87,7 +87,8 @@
 </nav>
         </div>
         <div class="container-fluid mr-2 mt-3">
-            <asp:GridView class="table table-bordered table-condensed table-responsive table-hover " ID="GridView1" runat="server" AllowPaging="True" AutoGenerateColumns="False" DataKeyNames="Id" DataSourceID="SqlDataSourceLinks" AllowSorting="True" EnableTheming="True">
+            <asp:GridView class="table table-bordered table-condensed table-responsive table-hover " ID="GridView1" runat="server" AllowPaging="True" AutoGenerateColumns="False" DataKeyNames="Id" DataSourceID="SqlDataSourceLinks" AllowSorting="True" EnableTheming="True" CellPadding="4" ForeColor="#333333" GridLines="None">
+                <AlternatingRowStyle BackColor="White" />
                 <Columns>
                     <asp:BoundField DataField="Id" HeaderText="Id" InsertVisible="False" ReadOnly="True" SortExpression="Id" />
                     <asp:BoundField DataField="Category" HeaderText="Category" SortExpression="Category" />
@@ -111,6 +112,16 @@
                     <asp:BoundField DataField="Description" HeaderText="Description" SortExpression="Description" />
                     <asp:CheckBoxField DataField="IsPublic" HeaderText="IsPublic" SortExpression="IsPublic" />
                 </Columns>
+                <EditRowStyle BackColor="#2461BF" />
+                <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+                <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+                <PagerStyle BackColor="#2461BF" ForeColor="White" HorizontalAlign="Center" />
+                <RowStyle BackColor="#EFF3FB" />
+                <SelectedRowStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
+                <SortedAscendingCellStyle BackColor="#F5F7FB" />
+                <SortedAscendingHeaderStyle BackColor="#6D95E1" />
+                <SortedDescendingCellStyle BackColor="#E9EBEF" />
+                <SortedDescendingHeaderStyle BackColor="#4870BE" />
             </asp:GridView>
             <asp:SqlDataSource ID="SqlDataSourceLinks" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" 
                 SelectCommand="SELECT Urls.Id, Category.Name AS Category, Urls.Name AS Name, Urls.Link, Urls.Description, Urls.IsPublic FROM Urls INNER JOIN Category ON Urls.Cid = Category.Id">

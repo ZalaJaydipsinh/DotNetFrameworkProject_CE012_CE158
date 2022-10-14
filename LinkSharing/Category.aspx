@@ -39,7 +39,7 @@ Inherits="LinkSharing.Category" %>
           <div>
             <nav class="navbar navbar-expand-lg bg-light">
   <div class="container-fluid">
-      <div class="protitle"><em><strong>LinkShare</strong></em>&nbsp;&nbsp;</div>
+      <div class="protitle"><em><strong>  KeepLink</strong></em>&nbsp;&nbsp;</div>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>

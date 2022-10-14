@@ -59,6 +59,7 @@ namespace LinkSharing
             {
                 Response.Write("Errors: " + ex.Message);
             }
+            GridView1.Columns[4].Visible = false;
         }
 
         protected void logout_Click(object sender, EventArgs e)
